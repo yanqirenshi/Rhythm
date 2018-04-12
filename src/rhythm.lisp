@@ -3,9 +3,8 @@
   (:import-from :bordeaux-threads
                 #:make-thread)
   (:export #:heart
-           #:start
-           #:stop
-           #:life-p)
+           #:life-p
+           #:tune)
   (:export #:name
            #:bpm
            #:beat
@@ -15,7 +14,7 @@
 
 (defclass heart ()
   ((name  :accessor name  :initarg :name  :initform nil :type 'string)
-   (bpm   :accessor bpm   :initarg :bpm   :initform 1   :type 'number)
+   (bpm   :accessor bpm                   :initform 0   :type 'number)
    (beat  :accessor beat  :initarg :beat  :initform nil :type 'function)
    (core  :accessor core  :initarg :core  :initform nil)
    (times :accessor times :initarg :times :initform 0   :type 'number)))
@@ -49,15 +48,30 @@
         (format nil "~a" heart)
         (format nil "~a, ~a" (name heart) heart))))
 
-(defmacro start (heart)
-  `(setf (core ,heart)
-         (make-thread #'(lambda ()
-                          (do ()
-                              ((not (life-p ,heart)) ,heart)
-                            (tick ,heart)
-                            (sleep (bpm ,heart))))
-                      :name (core-name ,heart))))
+(defgeneric start (heart)
+  (:method ((heart heart))
+    (assert (null (core heart))
+            (heart)
+            "Exist heart core. core=~a" (core heart))
+    (setf (core heart)
+          (make-thread #'(lambda ()
+                           (do ()
+                               ((not (life-p heart)) heart)
+                             (tick heart)
+                             (sleep (bpm heart))))
+                       :name (core-name heart)))
+    heart))
 
-(defmacro stop (heart)
-  `(when ,heart
-     (setf (bpm ,heart) 0)))
+(defgeneric stop (heart)
+  (:method ((heart heart))
+    (when heart
+      (setf (bpm heart) 0))
+    heart))
+
+(defgeneric tune (heart new-bpm)
+  (:method ((heart heart) (new-bpm number))
+    (let ((old-bpm (bpm heart)))
+      (setf (bpm heart) new-bpm)
+      (cond ((and (= 0 new-bpm) (< 0 old-bpm)) (stop heart))
+            ((and (< 0 new-bpm) (= 0 old-bpm)) (start heart))
+            (t heart)))))

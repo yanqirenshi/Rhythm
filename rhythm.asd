@@ -6,10 +6,9 @@
   :version "0.1.0"
   :author ""
   :license ""
-  :depends-on ()
+  :depends-on (:bordeaux-threads)
   :components ((:module "src"
-                :components
-                ((:file "rhythm"))))
+                :components ((:file "rhythm"))))
   :description ""
   :long-description
   #.(read-file-string
