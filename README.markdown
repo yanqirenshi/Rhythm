@@ -1,10 +1,6 @@
 # Rhythm
 
-Simple Metronome
-
-![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.jpeg "jpeg")
-![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.png "png")
-![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.svg "svg")
+<img src="https://github.com/yanqirenshi/rhythm/raw/master/assets/heart.svg?sanitize=true" alt="Image" title="svg" style="max-width:88px;"> Simple Metronome
 
 ## Usage
 
