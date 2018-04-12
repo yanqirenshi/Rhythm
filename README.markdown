@@ -2,6 +2,10 @@
 
 Simple Metronome
 
+[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.jpeg)
+[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.png)
+[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.svg)
+
 ## Usage
 
 ```lisp
