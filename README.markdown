@@ -2,9 +2,9 @@
 
 Simple Metronome
 
-[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.jpeg)
-[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.png)
-[](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.svg)
+![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.jpeg "jpeg")
+![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.png "png")
+![Image](https://github.com/yanqirenshi/rhythm/blob/master/assets/heart.svg "svg")
 
 ## Usage
 
