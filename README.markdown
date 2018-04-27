@@ -51,15 +51,15 @@ Return heart status.
 
 ### Generic Function: __tune__
 
-Syntax: __tune__ _heart beat_
+Syntax: __tune__ _heart bpm_
 
 Change heart status.
 
-| Status | tune: before | tune: after |
-|--------|--------------|-------------|
-| Start  | = 0          | > 0         |
-| Change | > 0          | > 0         |
-| Stop   | > 0          | = 0         |
+| Status | bpm: before | bpm: after |
+|--------|-------------|------------|
+| Start  | = 0         | > 0        |
+| Change | > 0         | > 0        |
+| Stop   | > 0         | = 0        |
 
 ## Dependencies
 
