@@ -55,11 +55,11 @@ Syntax: __tune__ _heart beat_
 
 Change heart status.
 
-| Status | before | after |
-|--------|--------|-------|
-| Start  | 0      | > 1   |
-| Change | > 1    | > 1   |
-| Stop   | > 1    | 0     |
+| Status | tune: before | tune: after |
+|--------|--------------|-------------|
+| Start  | = 0          | > 0         |
+| Change | > 0          | > 0         |
+| Stop   | > 0          | = 0         |
 
 ## Dependencies
 
