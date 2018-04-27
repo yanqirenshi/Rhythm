@@ -19,6 +19,8 @@
    (core  :accessor core  :initarg :core  :initform nil)
    (times :accessor times :initarg :times :initform 0   :type 'number)))
 
+(defvar *counter-max* 88888888)
+
 (defgeneric life-p (heart)
   (:method ((heart heart))
     (handler-case
@@ -29,7 +31,7 @@
 (defgeneric tick-times (heart)
   (:method ((heart heart))
     (setf (times heart)
-          (if (= 88888888 (times heart))
+          (if (= *counter-max* (times heart))
               1
               (+ 1 (times heart))))))
 
