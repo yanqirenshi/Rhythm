@@ -4,8 +4,8 @@
 
 (defsystem "rhythm-test"
   :defsystem-depends-on ("prove-asdf")
-  :author ""
-  :license ""
+  :author "Satoshi Iwasaki (yanqirenshi@gmail.com)"
+  :license "LLGPL"
   :depends-on ("rhythm"
                "prove")
   :components ((:module "tests"

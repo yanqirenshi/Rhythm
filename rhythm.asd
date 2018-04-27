@@ -4,12 +4,12 @@
 
 (defsystem "rhythm"
   :version "0.1.0"
-  :author ""
-  :license ""
+  :author "Satoshi Iwasaki (yanqirenshi@gmail.com)"
+  :license "LLGPL"
   :depends-on (:bordeaux-threads)
   :components ((:module "src"
                 :components ((:file "rhythm"))))
-  :description ""
+  :description "Simple Metronome"
   :long-description
   #.(read-file-string
      (subpathname *load-pathname* "README.markdown"))
