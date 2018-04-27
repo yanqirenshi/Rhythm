@@ -57,11 +57,11 @@ Syntax: __tune__ _heart bpm_
 
 Change bpm and heart status.
 
-| bpm: before | bpm: after | Status    | life-p |
-|-------------|------------|-----------|--------|
-| = 0         | > 0        | Start     | t      |
-| > 0         | > 0        | unchanged | t      |
-| > 0         | = 0        | Stop      | nil    |
+| bpm: before | bpm: after | Action    | Status(`life-p`) |
+|-------------|------------|-----------|------------------|
+| = 0         | > 0        | Start     | t                |
+| > 0         | > 0        | Unchanged | t                |
+| > 0         | = 0        | Stop      | nil              |
 
 ## Dependencies
 
