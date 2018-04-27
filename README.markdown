@@ -1,6 +1,8 @@
 # Rhythm
 
-<img src="https://github.com/yanqirenshi/rhythm/raw/master/assets/heart.svg?sanitize=true" alt="Image" title="svg" style="max-width:88px;"> Simple Metronome
+Simple Metronome
+
+<img src="https://github.com/yanqirenshi/rhythm/raw/master/assets/heart.svg?sanitize=true" alt="Image" title="svg" style="max-width:88px;">
 
 ## Usage
 
@@ -34,3 +36,39 @@ RHYTHM> (core *heart*)
 ```lisp
 (ql:quickload :rhythm)
 ```
+
+## Symbols
+
+### Class: __heart__
+
+Tick the beat.
+
+### Generic Function: __life-p__
+
+Syntax: life-p _heart_
+
+Return heart status.
+
+### Generic Function__tune__
+
+Syntax: tune _heart beat_
+
+Change heart status.
+
+| Status | before | after |
+|--------|--------|-------|
+| Start  | 0      | > 1   |
+| Change | > 1    | > 1   |
+| Stop   | > 1    | 0     |
+
+## Author
+
++ Satoshi Iwasaki (yanqirenshi@gmail.com)
+
+# Copyright
+
+Copyright (c) 2018 Satoshi Iwasaki (yanqirenshi@gmail.com)
+
+# License
+
+LLGPL
