@@ -45,13 +45,13 @@ Tick the beat.
 
 ### Generic Function: __life-p__
 
-Syntax: life-p _heart_
+Syntax: __life-p__ _heart_
 
 Return heart status.
 
-### Generic Function__tune__
+### Generic Function: __tune__
 
-Syntax: tune _heart beat_
+Syntax: __tune__ _heart beat_
 
 Change heart status.
 
@@ -60,6 +60,10 @@ Change heart status.
 | Start  | 0      | > 1   |
 | Change | > 1    | > 1   |
 | Stop   | > 1    | 0     |
+
+## Dependencies
+
+- [bordeaux-threads](https://github.com/sionescu/bordeaux-threads)
 
 ## Author
 
