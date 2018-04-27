@@ -1,8 +1,10 @@
 # Rhythm
 
-Simple Metronome
+<img src="https://github.com/yanqirenshi/rhythm/raw/master/assets/heart.svg?sanitize=true" alt="Image" title="svg">
 
-<img src="https://github.com/yanqirenshi/rhythm/raw/master/assets/heart.svg?sanitize=true" alt="Image" title="svg" style="max-width:88px;">
+## Description
+
+Simple Metronome
 
 ## Usage
 
@@ -53,13 +55,13 @@ Return heart status.
 
 Syntax: __tune__ _heart bpm_
 
-Change heart status.
+Change bpm and heart status.
 
-| Status | bpm: before | bpm: after |
-|--------|-------------|------------|
-| Start  | = 0         | > 0        |
-| Change | > 0         | > 0        |
-| Stop   | > 0         | = 0        |
+| bpm: before | bpm: after | Status    | life-p |
+|-------------|------------|-----------|--------|
+| = 0         | > 0        | Start     | t      |
+| > 0         | > 0        | unchanged | t      |
+| > 0         | = 0        | Stop      | nil    |
 
 ## Dependencies
 
