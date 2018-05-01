@@ -13,9 +13,8 @@ CL-USER> (in-package :rhythm)
 #<PACKAGE "RHYTHM">
 RHYTHM>
 (defvar *heart*
-  (make-instance 'heart
-                 :name "my-heart"
-                 :beat #'(lambda (heart times)
+  (make-heart :name "my-heart"
+              :core #'(lambda (heart times)
                            (format t "~a, ~a" heart times))))
 
 *HEART*
