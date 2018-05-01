@@ -3,6 +3,7 @@
   (:import-from :bordeaux-threads
                 #:make-thread)
   (:export #:heart
+           #:make-heart
            #:life-p
            #:tune)
   (:export #:name
@@ -57,11 +58,17 @@
         (tick heart)
         (sleep (bpm heart)))))
 
+(defun make-heart (&key name core)
+  (make-instance 'heart :name name :beat core))
+
 (defgeneric start (heart)
   (:method ((heart heart))
-    (assert (null (core heart))
-            (heart)
-            "Exist heart core. core=~a" (core heart))
+    (when (core heart)
+      (assert (not (bordeaux-threads:thread-alive-p (core heart)))
+              (heart)
+              "Exist heart core. core=~a" (core heart)))
+    (assert (not (null (bpm heart))) () "BPM is Empty")
+    (assert (< 0 (bpm heart)) () "BPM < 0")
     (setf (core heart)
           (make-thread (make-thread-core heart)
                        :name (core-name heart)))
