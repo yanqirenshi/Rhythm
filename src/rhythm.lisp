@@ -58,8 +58,8 @@
         (tick heart)
         (sleep (bpm heart)))))
 
-(defun make-heart (&key name core)
-  (make-instance 'heart :name name :beat core))
+(defun make-heart (&key (class 'heart) name core)
+  (make-instance class :name name :beat core))
 
 (defgeneric start (heart)
   (:method ((heart heart))
